@@ -58,11 +58,11 @@
 			children = (
 				8BEF90B822705FE700AAEFBA /* AppDelegate.swift */,
 				8BEF90BA22705FE700AAEFBA /* ViewController.swift */,
+				8BEF90CA2270600500AAEFBA /* PopulationStruct.swift */,
 				8BEF90BC22705FE700AAEFBA /* Main.storyboard */,
 				8BEF90BF22705FEA00AAEFBA /* Assets.xcassets */,
 				8BEF90C122705FEA00AAEFBA /* LaunchScreen.storyboard */,
 				8BEF90C422705FEA00AAEFBA /* Info.plist */,
-				8BEF90CA2270600500AAEFBA /* PopulationStruct.swift */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
