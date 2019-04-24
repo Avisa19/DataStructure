@@ -75,3 +75,36 @@ func test() {
 }
 
 
+//Test without Structure
+func testWithoutStructure(people: [(birth: Int, dead: Int?)]) -> [Int] {
+    var statistics = [Int: Int]()
+    for per in people {
+        if let dead = per.dead {
+            if let value = statistics[dead + 1] {
+                statistics[dead + 1] = value - 1
+            } else {
+                statistics[dead + 1] = -1
+            }
+        }
+        
+        if let value = statistics[per.birth] {
+            statistics[per.birth] = value + 1
+        } else {
+            statistics[per.birth] = 1
+        }
+    }
+    
+    
+    let finalStatistics = statistics.sorted(by: { return $0.key < $1.key })
+    var sum = 0
+    var yearsLowerPopulation = [Int]()
+    for i in 0 ..< finalStatistics.count {
+        let newSum = sum + finalStatistics[i].value
+        if newSum < sum {
+            yearsLowerPopulation.append(finalStatistics[i].key)
+        }
+        sum = newSum
+    }
+    
+    return yearsLowerPopulation
+}
